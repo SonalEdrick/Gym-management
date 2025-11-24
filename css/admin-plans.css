@@ -1,0 +1,227 @@
+/* ---------- GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.sidebar-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e50914;
+  margin-bottom: 3rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sidebar-menu li a {
+  display: block;
+  color: #ccc;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+  background: #e50914;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* ---------- MAIN ---------- */
+.main-content {
+  margin-left: 250px;
+  padding: 3rem 5%;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.dashboard-header .subtitle {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.dashboard-header button {
+  background: #e50914;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dashboard-header button:hover {
+  background: #b00610;
+}
+
+/* ---------- TABLE ---------- */
+.table-section {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ddd;
+  min-width: 700px;
+}
+
+th, td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  color: #e50914;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+tr:hover {
+  background: rgba(229, 9, 20, 0.1);
+}
+
+td button {
+  background: #e50914;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+td button:hover {
+  background: #b00610;
+}
+
+.loading {
+  text-align: center;
+  color: #aaa;
+  padding: 1rem 0;
+}
+
+/* ---------- MODAL ---------- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: #e50914;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background: #111;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.modal-content textarea {
+  resize: none;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-actions button {
+  flex: 1;
+  margin: 0 0.3rem;
+  background: #e50914;
+  border: none;
+  padding: 0.8rem;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.modal-actions button:hover {
+  background: #b00610;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  margin-left: 250px;
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+}

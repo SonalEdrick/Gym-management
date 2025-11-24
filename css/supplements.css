@@ -1,0 +1,106 @@
+/* ---------- IMPORT GLOBAL HEADER STYLES ---------- */
+@import url("index.css");
+
+/* ---------- SUPPLEMENT PAGE STYLES ---------- */
+
+main {
+  padding: 4rem 5%;
+  text-align: center;
+  background-color: #0d0d0d;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+main p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------- SUPPLEMENTS GRID ---------- */
+.supplements-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.supplement-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.supplement-card:hover {
+  transform: translateY(-6px);
+  background: #161616;
+}
+
+.supplement-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.supplement-card h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.supplement-card p {
+  color: #bbb;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.price {
+  color: #00ff99;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.buy-btn {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: #b00610;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .supplement-card img {
+    height: 150px;
+  }
+}

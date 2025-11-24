@@ -1,0 +1,228 @@
+/* ---------- GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  background: #111;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e50914;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #e50914;
+}
+
+/* ---------- DROPDOWN ---------- */
+.dropdown {
+  position: relative;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a1a1a;
+  top: 120%;
+  right: 0;
+  min-width: 170px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1002;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: #ccc;
+}
+
+.dropdown-content a:hover {
+  background: #e50914;
+  color: #fff;
+}
+
+.dropdown-content.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- CONTACT SECTION ---------- */
+.contact {
+  background: url('https://images.unsplash.com/photo-1571019613914-85f342c1d49e?auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover;
+  min-height: 100vh;
+  padding: 4rem 8%;
+  position: relative;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-content h1 span {
+  color: #e50914;
+}
+
+.contact-content p {
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* ---------- FORM ---------- */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+form {
+  background: rgba(17, 17, 17, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+  outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid #e50914;
+}
+
+form button {
+  background: #e50914;
+  border: none;
+  padding: 0.9rem 2rem;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #b00610;
+}
+
+/* ---------- CONTACT INFO ---------- */
+.contact-info {
+  max-width: 400px;
+}
+
+.contact-info h3 {
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+footer span {
+  color: #e50914;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,240 @@
+/* ---------- GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+  padding: 2rem 1rem;
+  z-index: 1000;
+}
+
+.sidebar-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e50914;
+  margin-bottom: 3rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sidebar-menu li a {
+  display: block;
+  color: #ccc;
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+  background: #e50914;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* ---------- MAIN CONTENT ---------- */
+.main-content {
+  margin-left: 250px;
+  padding: 3rem 5%;
+  min-height: 100vh;
+  background-color: #0d0d0d;
+}
+
+.dashboard-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.dashboard-header span {
+  color: #e50914;
+}
+
+.dashboard-header .subtitle {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* ---------- STATS OVERVIEW ---------- */
+.stats-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-box {
+  background: #1a1a1a;
+  padding: 1.8rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.stat-box:hover {
+  transform: translateY(-6px);
+  background: #161616;
+}
+
+.stat-box h2 {
+  color: #e50914;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* ---------- CHARTS SECTION ---------- */
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.chart-container {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.chart-container:hover {
+  transform: translateY(-5px);
+}
+
+.chart-container h3 {
+  color: #e50914;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer span {
+  color: #e50914;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 200px;
+    padding: 2rem 4%;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .chart-container {
+    padding: 1rem;
+  }
+
+  canvas {
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 0.5rem;
+    box-shadow: none;
+  }
+
+  .sidebar-logo {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .sidebar-menu li a {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 2rem 1rem;
+  }
+
+  .stats-overview {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .charts-section {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    margin-left: 0;
+  }
+}

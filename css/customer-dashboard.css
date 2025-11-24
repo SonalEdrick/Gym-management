@@ -1,0 +1,173 @@
+/* ---------- GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+  padding: 2rem 1rem;
+  z-index: 1000;
+}
+
+.sidebar-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e50914;
+  margin-bottom: 3rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sidebar-menu li a {
+  display: block;
+  color: #ccc;
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+  background: #e50914;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* ---------- MAIN CONTENT ---------- */
+.main-content {
+  margin-left: 250px;
+  padding: 4rem 5%;
+}
+
+/* ---------- NOTIFICATIONS ---------- */
+.notifications-section {
+  margin-bottom: 3rem;
+}
+
+.notifications-list {
+  list-style: none;
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.notifications-list li {
+  border-bottom: 1px solid #333;
+  padding: 0.8rem 0;
+  color: #ccc;
+}
+
+.notifications-list li.unread {
+  color: #fff;
+  font-weight: 600;
+}
+
+.notifications-list li:last-child {
+  border-bottom: none;
+}
+
+.notifications-list small {
+  color: #888;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+/* ---------- MEMBERSHIP CARD ---------- */
+.membership-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.membership-card h3 {
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+.membership-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ---------- PAYMENT TABLE ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  background: #e50914;
+  color: #fff;
+}
+
+td {
+  color: #ccc;
+}
+
+.loading {
+  text-align: center;
+  color: #888;
+}
+
+button.renew-btn {
+  background: #e50914;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+
+button.renew-btn:hover {
+  background: #b00610;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+  margin-top: 3rem;
+}

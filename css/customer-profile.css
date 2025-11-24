@@ -1,0 +1,221 @@
+/* ---------- GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- SIDEBAR (CONSISTENT WITH DASHBOARD) ---------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+  padding: 2rem 1rem;
+  z-index: 1000;
+}
+
+.sidebar-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e50914;
+  margin-bottom: 3rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sidebar-menu li a {
+  display: block;
+  color: #ccc;
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+  background: #e50914;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* ---------- PROFILE SECTION ---------- */
+.main-content {
+  margin-left: 250px; /* room for sidebar */
+  flex: 1; /* ensures main content grows */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #0d0d0d;
+  padding: 3rem 5%;
+  min-height: calc(100vh - 60px); /* space for footer */
+}
+
+.profile-container {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  margin-top: 1rem;
+}
+
+.profile-container h2 {
+  color: #e50914;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.profile-container label {
+  display: block;
+  color: #ccc;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.profile-container input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  background: #111;
+  color: #fff;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border 0.3s, background 0.3s;
+}
+
+.profile-container input:focus {
+  border: 1px solid #e50914;
+  background: #181818;
+}
+
+.profile-container button {
+  width: 100%;
+  background: #e50914;
+  border: none;
+  padding: 0.9rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 0.3rem;
+}
+
+.profile-container button:hover {
+  background: #b00610;
+  transform: scale(1.05);
+}
+
+.success {
+  color: #4caf50;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.error {
+  color: #f44336;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* ---------- FOOTER (FIXED POSITION BELOW CONTENT) ---------- */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+  margin-left: 250px; /* aligns with sidebar */
+  width: calc(100% - 250px);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+}
+
+footer span {
+  color: #e50914;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 200px;
+    padding: 2rem 4%;
+  }
+
+  footer {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 0.5rem;
+    box-shadow: none;
+  }
+
+  .sidebar-logo {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .sidebar-menu li a {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 2rem 1rem;
+  }
+
+  footer {
+    margin-left: 0;
+    width: 100%;
+  }
+}
