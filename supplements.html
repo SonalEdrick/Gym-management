@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supplement Store | Titan's Club</title>
+  <link rel="stylesheet" href="css/supplements.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Titan's Club</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="supplement.html" class="active">Store</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="dropdown" id="loginDropdown">
+          <a href="#" id="loginMain">Login</a>
+          <div class="dropdown-content" id="loginMenu">
+            <a href="admin/admin-login.html">Admin Login</a>
+            <a href="customer/customer-login.html">Customer Login</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>💊 Supplement Store</h1>
+    <p>Explore our curated supplements to power your fitness journey.</p>
+
+    <div id="supplementsContainer" class="supplements-container">
+      <p>Loading supplements...</p>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 <span>Titan's Club</span>. All Rights Reserved.
+  </footer>
+
+  <script type="module" src="js/supplements.js"></script>
+</body>
+</html>

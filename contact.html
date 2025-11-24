@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Titan's Club</title>
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Titan's Club</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="supplements.html">Store</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" id="loginMain">Login</a> <!-- ✅ Added id -->
+          <div class="dropdown-content">
+            <a href="admin/admin-login.html">Admin Login</a>
+            <a href="customer/customer-login.html">Customer Login</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="contact-content">
+      <h1>Get in <span>Touch</span></h1>
+      <p>Have questions, feedback, or want to join Titan's Club?  
+      Fill out the form below and we’ll get back to you soon.</p>
+    </div>
+
+    <div class="contact-container">
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Full Name" required />
+        <input type="email" id="email" placeholder="Your Email Address" required />
+        <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Reach Us At</h3>
+        <p><strong>📍 Address:</strong> Titan’s Club, 45 Fitness Avenue, Mumbai</p>
+        <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+        <p><strong>📧 Email:</strong> contact@titansclub.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 <span>Titan's Club</span>. All Rights Reserved.
+  </footer>
+
+  <script src="js/contact.js"></script>
+</body>
+</html>
