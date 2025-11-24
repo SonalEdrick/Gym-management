@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Titan's Club</title>
+  <link rel="stylesheet" href="../css/admin-dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Titan's Club</div>
+    <ul class="sidebar-menu">
+      <li><a href="#" class="active">📊 Dashboard</a></li>
+      <li><a href="admin-manage-members.html">👥 Manage Members</a></li>
+      <li><a href="admin-plans.html">📋 Plans</a></li>
+      <li><a href="admin-supplements.html">💊 Supplements</a></li>
+      <li><a href="admin-payments.html">💳 Payments</a></li>
+      <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="dashboard-header">
+      <h1>Welcome, <span id="adminName">Admin</span> 🏋️</h1>
+      <p class="subtitle">Your real-time performance analytics</p>
+    </header>
+
+    <!-- Stats Overview -->
+    <section class="stats-overview">
+      <div class="stat-box">
+        <h2 id="totalMembers">0</h2>
+        <p>Total Members</p>
+      </div>
+      <div class="stat-box">
+        <h2 id="activePlans">0</h2>
+        <p>Active Plans</p>
+      </div>
+      <div class="stat-box">
+        <h2 id="totalPayments">0</h2>
+        <p>Total Payments</p>
+      </div>
+      <div class="stat-box">
+        <h2 id="totalRevenue">$0</h2>
+        <p>Total Revenue</p>
+      </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts-section">
+      <div class="chart-container">
+        <h3>📈 Monthly Revenue</h3>
+        <canvas id="revenueChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <h3>🧍 New Members (Last 6 Months)</h3>
+        <canvas id="membersChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 <span>Titan's Club</span>. All Rights Reserved.
+  </footer>
+
+  <script type="module" src="../js/admin-dashboard.js"></script>
+</body>
+</html>
 
