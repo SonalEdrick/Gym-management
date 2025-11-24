@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | Titan's Club</title>
+  <link rel="stylesheet" href="../css/customer-profile.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Titan's Club</div>
+    <ul class="sidebar-menu">
+      <li><a href="customer-dashboard.html">🏠 Dashboard</a></li>
+      <li><a href="#" class="active">👤 Profile</a></li>
+      <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Profile Section -->
+  <main class="main-content">
+    <div class="profile-container">
+      <h2>My Profile</h2>
+      <form id="profileForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" id="phoneNumber" pattern="[0-9+\-\s]+" required />
+
+        <label for="password">New Password</label>
+        <input type="password" id="password" minlength="6" placeholder="Leave blank to keep current password" />
+
+        <button type="submit">Update Profile</button>
+        <p class="success" id="successMsg" style="display:none;">Profile updated successfully!</p>
+        <p class="error" id="errorMsg" style="display:none;">Error updating profile.</p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 <span>Titan's Club</span>. All Rights Reserved.
+  </footer>
+
+  <script type="module" src="../js/customer-profile.js"></script>
+</body>
+</html>
