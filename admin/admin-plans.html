@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plans | Titan's Club Admin</title>
+  <link rel="stylesheet" href="../css/admin-plans.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Titan's Club</div>
+    <ul class="sidebar-menu">
+      <li><a href="admin-dashboard.html">📊 Dashboard</a></li>
+      <li><a href="admin-manage-members.html">👥 Manage Members</a></li>
+      <li><a href="admin-plans.html" class="active">📋 Plans</a></li>
+      <li><a href="admin-supplements.html">💊 Supplements</a></li>
+      <li><a href="admin-payments.html">💳 Payments</a></li>
+      <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="dashboard-header">
+      <h1>📋 Manage Membership Plans</h1>
+      <button id="addPlanBtn">+ Add New Plan</button>
+    </header>
+
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Plan Name</th>
+            <th>Duration</th>
+            <th>Price (₹)</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="plansTableBody">
+          <tr><td colspan="5" class="loading">Loading plans...</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Add/Edit Plan Modal -->
+  <div class="modal" id="planModal">
+    <div class="modal-content">
+      <h2 id="modalTitle">Add Plan</h2>
+      <form id="planForm">
+        <label>Plan Name</label>
+        <input type="text" id="planName" required />
+
+        <label>Duration (months)</label>
+        <input type="number" id="planDuration" min="1" required />
+
+        <label>Price (₹)</label>
+        <input type="number" id="planPrice" min="0" required />
+
+        <label>Description</label>
+        <textarea id="planDescription" rows="3" placeholder="Short description..." required></textarea>
+
+        <div class="modal-actions">
+          <button type="submit" id="savePlanBtn">Save</button>
+          <button type="button" id="closeModal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 <span>Titan's Club</span>. All Rights Reserved.
+  </footer>
+
+  <script type="module" src="../js/admin-plans.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Members | Titan's Club</title>
+  <link rel="stylesheet" href="../css/admin-dashboard.css" />
+  <style>
+    /* ---------- MAIN CONTENT ---------- */
+    .main-content {
+      margin-left: 250px;
+      padding: 2rem;
+      min-height: 100vh;
+      background: #0d0d0d;
+    }
+
+    h2 {
+      color: #e50914;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .search-box {
+      text-align: right;
+      margin-bottom: 1.5rem;
+    }
+
+    .search-box input {
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      width: 250px;
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #333;
+      color: #ddd;
+    }
+
+    th {
+      background: #111;
+      color: #e50914;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    tr:hover {
+      background: #222;
+    }
+
+    .btn {
+      padding: 0.4rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-edit {
+      background: #e50914;
+      color: #fff;
+    }
+
+    .btn-delete {
+      background: #b00610;
+      color: #fff;
+    }
+
+    /* ---------- MODAL ---------- */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content h3 {
+      color: #e50914;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .modal-content input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 6px;
+      background: #111;
+      color: #fff;
+    }
+
+    .modal-content button {
+      width: 100%;
+      background: #e50914;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 30px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Titan's Club</div>
+    <ul class="sidebar-menu">
+      <li><a href="admin-dashboard.html">📊 Dashboard</a></li>
+      <li><a href="#" class="active">👥 Manage Members</a></li>
+      <li><a href="admin-plans.html">📋 Plans</a></li>
+      <li><a href="admin-supplements.html">💊 Supplements</a></li>
+      <li><a href="admin-payments.html">💳 Payments</a></li>
+      <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h2>Manage Members</h2>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search members..." />
+    </div>
+
+    <table id="membersTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <!-- Edit Modal -->
+  <div class="modal" id="editModal">
+    <div class="modal-content">
+      <h3>Edit Member</h3>
+      <input type="text" id="editName" placeholder="Full Name" />
+      <input type="email" id="editEmail" placeholder="Email" />
+      <input type="text" id="editPhone" placeholder="Phone Number" />
+      <button id="saveEditBtn">Save Changes</button>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 <span>Titan's Club</span>. All Rights Reserved.
+  </footer>
+
+  <script type="module" src="../js/admin-manage-members.js"></script>
+</body>
+</html>

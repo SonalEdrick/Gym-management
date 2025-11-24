@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Supplements | Titan's Club Admin</title>
+  <link rel="stylesheet" href="../css/admin-dashboard.css" />
+  <style>
+    /* ---------- SUPPLEMENT MANAGEMENT ---------- */
+
+.add-supplement-section {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.add-supplement-section h2 {
+  color: #e50914;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+#addSupplementForm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+#addSupplementForm input,
+#addSupplementForm textarea {
+  background: #111;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border 0.3s, background 0.3s;
+  resize: none;
+}
+
+#addSupplementForm input:focus,
+#addSupplementForm textarea:focus {
+  border-color: #e50914;
+  background: #141414;
+}
+
+#addSupplementForm button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+#addSupplementForm button:hover {
+  background: #b00610;
+  transform: translateY(-2px);
+}
+
+/* ---------- SUPPLEMENT TABLE ---------- */
+
+.supplement-list-section {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.supplement-list-section h2 {
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+.supplement-list-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.supplement-list-section th,
+.supplement-list-section td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  color: #ccc;
+}
+
+.supplement-list-section th {
+  background: #e50914;
+  color: #fff;
+  font-weight: 600;
+}
+
+.supplement-list-section tr:hover td {
+  background: #181818;
+}
+
+.supplement-list-section button {
+  background: none;
+  border: none;
+  color: #e50914;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.supplement-list-section button:hover {
+  color: #ff4d4d;
+}
+
+  </style>
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Titan's Club</div>
+    <ul class="sidebar-menu">
+      <li><a href="admin-dashboard.html">🏠 Dashboard</a></li>
+      <li><a href="admin-manage-members.html">👥 Members</a></li>
+      <li><a href="admin-plans.html">📋 Plans</a></li>
+      <li><a href="admin-supplements.html" class="active">💊 Supplements</a></li>
+      <li><a href="admin-payments.html">💳 Payments</a></li>
+      <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <header class="dashboard-header">
+      <h1>💊 Manage <span>Supplements</span></h1>
+    </header>
+
+    <!-- Add Supplement Form -->
+    <section class="add-supplement-section">
+      <h2>Add New Supplement</h2>
+      <form id="addSupplementForm">
+        <input type="text" id="suppName" placeholder="Name" required />
+        <input type="number" id="suppPrice" placeholder="Price (₹)" required />
+        <input type="text" id="suppImage" placeholder="Image URL" />
+        <textarea id="suppDesc" placeholder="Description" rows="3"></textarea>
+        <button type="submit">➕ Add Supplement</button>
+      </form>
+    </section>
+
+    <!-- Supplements List -->
+    <section class="supplement-list-section">
+      <h2>All Supplements</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price (₹)</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="supplementsTableBody">
+          <tr><td colspan="5" class="loading">Loading supplements...</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 <span>Titan's Club</span>. All Rights Reserved.
+  </footer>
+
+  <script type="module" src="../js/admin-supplements.js"></script>
+</body>
+</html>
