@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Dashboard | Titan's Club</title>
+  <link rel="stylesheet" href="../css/customer-dashboard.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-logo">Titan's Club</div>
+    <ul class="sidebar-menu">
+      <li><a href="#" class="active">🏠 Dashboard</a></li>
+      <li><a href="customer-profile.html">👤 Profile</a></li>
+      <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <header class="dashboard-header">
+      <h1>Welcome, <span id="userEmail">Member</span> 💪</h1>
+    </header>
+
+    <!-- Notifications Section -->
+    <section class="notifications-section">
+      <h2>🔔 Notifications</h2>
+      <ul id="notificationsList" class="notifications-list">
+        <li>Loading notifications...</li>
+      </ul>
+    </section>
+
+    <!-- Active Membership -->
+    <section class="membership-section">
+      <h2>💳 Active Membership</h2>
+      <div id="membershipCard" class="membership-card">
+        <p>Loading your membership details...</p>
+      </div>
+    </section>
+
+    <!-- Payment History -->
+    <section class="payments-section">
+      <h2>📜 Payment History</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Amount (₹)</th>
+            <th>Status</th>
+            <th>Start Date</th>
+            <th>Expiry Date</th>
+            <th>Receipt</th>
+          </tr>
+        </thead>
+        <tbody id="paymentHistoryBody">
+          <tr><td colspan="6" class="loading">Loading payments...</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 <span>Titan's Club</span>. All Rights Reserved.
+  </footer>
+
+  <script type="module" src="../js/customer-dashboard.js"></script>
+</body>
+</html>
